@@ -108,13 +108,13 @@ const express = Express();
 
 express.use(Cors());
 
-express.get("/files", async(req: Express.Request, res: Express.Response) => {
+express.get("/api/files", async(req: Express.Request, res: Express.Response) => {
 
 	res.send(buildDirectory(ROOT_FILE_PATH));
 
 });
 
-express.get("/file/*", async (req: Express.Request, res: Express.Response) => {
+express.get("/api/file/*", async (req: Express.Request, res: Express.Response) => {
 
 	const url = req.url.replace("/file", "");
 	const fullPath = ROOT_FILE_PATH + decodeURI(url);
