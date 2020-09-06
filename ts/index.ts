@@ -116,7 +116,7 @@ express.get("/api/files", async(req: Express.Request, res: Express.Response) => 
 
 express.get("/api/file/*", async (req: Express.Request, res: Express.Response) => {
 
-	const url = req.url.replace("/file", "");
+	const url = req.url.replace("/api/file", "");
 	const fullPath = ROOT_FILE_PATH + decodeURI(url);
 	if (!FS.existsSync(fullPath)) return res.status(404).send({error: "File does not exist."});
 	res.sendFile(fullPath);
