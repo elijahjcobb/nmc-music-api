@@ -29,7 +29,7 @@ export interface File {
 }
 
 
-const ROOT_FILE_PATH: string = "/home/elijah/Downloads/nmc-test";
+const ROOT_FILE_PATH: string = "/home/nmcmusic/app-data";
 
 function nameFromPath(path: string): string {
 	if (path === ROOT_FILE_PATH) return "";
